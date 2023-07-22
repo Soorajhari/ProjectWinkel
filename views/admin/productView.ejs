@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>CelestialUI Admin</title>
+    <!-- base:css -->
+    <link
+      rel="stylesheet"
+      href="/assets/vendors/typicons.font/font/typicons.css"
+    />
+    <link rel="stylesheet" href="/assets/vendors/css/vendor.bundle.base.css" />
+    <!-- endinject -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="/assets/css/vertical-layout-light/style.css" />
+    <!-- endinject -->
+    <link rel="shortcut icon" href="assets/images/favicon.png" />
+
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+    crossorigin="anonymous"
+  />
+
+  </head>
+
+  <body>
+    <div class="container-scroller">
+      <!-- partial:../../partials/_navbar.html -->
+      <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+        <div
+          class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center"
+        >
+          <!-- <a class="navbar-brand brand-logo" href="../../index.html"
+            ><img src="assets/images/logo.svg" alt="logo"
+          /></a>
+          <a class="navbar-brand brand-logo-mini" href="../../index.html"
+            ><img src="assets/images/logo-mini.svg" alt="logo"
+          /></a> -->
+          <h4><strong style="color: brown">WINKEL</strong> fashion World</h4>
+          <!-- <button
+            class="navbar-toggler navbar-toggler align-self-center d-none d-lg-flex"
+            type="button"
+            data-toggle="minimize"
+          >
+            <span class="typcn typcn-th-menu"></span>
+          </button> -->
+        </div>
+        <div
+          class="navbar-menu-wrapper d-flex align-items-center justify-content-end"
+        >
+          <ul class="navbar-nav mr-lg-2">
+            <!-- <li class="nav-item d-none d-lg-flex">
+              <a class="nav-link" href="#"> Calendar </a>
+            </li>
+            <li class="nav-item d-none d-lg-flex">
+              <a class="nav-link active" href="#"> Statistic </a>
+            </li>
+            <li class="nav-item d-none d-lg-flex">
+              <a class="nav-link" href="#"> Employee </a>
+            </li>
+          </ul>
+          <ul class="navbar-nav navbar-nav-right">
+            <li class="nav-item d-none d-lg-flex mr-2">
+              <a class="nav-link" href="#"> Help </a>
+            </li> -->
+            <li class="nav-item dropdown d-flex">
+              <a
+                class="nav-link count-indicator dropdown-toggle d-flex justify-content-center align-items-center"
+                id="messageDropdown"
+                href="#"
+                data-toggle="dropdown"
+              >
+                <i class="typcn typcn-message-typing"></i>
+                <span class="count bg-success">2</span>
+              </a>
+              <div
+                class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list"
+                aria-labelledby="messageDropdown"
+              >
+                <p class="mb-0 font-weight-normal float-left dropdown-header">
+                  Messages
+                </p>
+                <a class="dropdown-item preview-item">
+                  <div class="preview-thumbnail">
+                    <img
+                      src="assets/images/faces/face4.jpg"
+                      alt="image"
+                      class="profile-pic"
+                    />
+                  </div>
+                  <div class="preview-item-content flex-grow">
+                    <h6 class="preview-subject ellipsis font-weight-normal">
+                      David Grey
+                    </h6>
+                    <p class="font-weight-light small-text mb-0">
+                      The meeting is cancelled
+                    </p>
+                  </div>
+                </a>
+                <a class="dropdown-item preview-item">
+                  <div class="preview-thumbnail">
+                    <img
+                      src="assetsimages/faces/face2.jpg"
+                      alt="image"
+                      class="profile-pic"
+                    />
+                  </div>
+                  <div class="preview-item-content flex-grow">
+                    <h6 class="preview-subject ellipsis font-weight-normal">
+                      Tim Cook
+                    </h6>
+                    <p class="font-weight-light small-text mb-0">
+                      New product launch
+                    </p>
+                  </div>
+                </a>
+                <a class="dropdown-item preview-item">
+                  <div class="preview-thumbnail">
+                    <img
+                      src="assets/faces/face3.jpg"
+                      alt="image"
+                      class="profile-pic"
+                    />
+                  </div>
+                  <div class="preview-item-content flex-grow">
+                    <h6 class="preview-subject ellipsis font-weight-normal">
+                      Johnson
+                    </h6>
+                    <p class="font-weight-light small-text mb-0">
+                      Upcoming board meeting
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </li>
+            <li class="nav-item dropdown d-flex">
+              <a
+                class="nav-link count-indicator dropdown-toggle d-flex align-items-center justify-content-center"
+                id="notificationDropdown"
+                href="#"
+                data-toggle="dropdown"
+              >
+                <i class="typcn typcn-bell mr-0"></i>
+                <span class="count bg-danger">2</span>
+              </a>
+              <div
+                class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list"
+                aria-labelledby="notificationDropdown"
+              >
+                <p class="mb-0 font-weight-normal float-left dropdown-header">
+                  Notifications
+                </p>
+                <a class="dropdown-item preview-item">
+                  <div class="preview-thumbnail">
+                    <div class="preview-icon bg-success">
+                      <i class="typcn typcn-info-large mx-0"></i>
+                    </div>
+                  </div>
+                  <div class="preview-item-content">
+                    <h6 class="preview-subject font-weight-normal">
+                      Application Error
+                    </h6>
+                    <p class="font-weight-light small-text mb-0">Just now</p>
+                  </div>
+                </a>
+                <a class="dropdown-item preview-item">
+                  <div class="preview-thumbnail">
+                    <div class="preview-icon bg-warning">
+                      <i class="typcn typcn-cog mx-0"></i>
+                    </div>
+                  </div>
+                  <div class="preview-item-content">
+                    <h6 class="preview-subject font-weight-normal">Settings</h6>
+                    <p class="font-weight-light small-text mb-0">
+                      Private message
+                    </p>
+                  </div>
+                </a>
+                <a class="dropdown-item preview-item">
+                  <div class="preview-thumbnail">
+                    <div class="preview-icon bg-info">
+                      <i class="typcn typcn-user-outline mx-0"></i>
+                    </div>
+                  </div>
+                  <div class="preview-item-content">
+                    <h6 class="preview-subject font-weight-normal">
+                      New user registration
+                    </h6>
+                    <p class="font-weight-light small-text mb-0">2 days ago</p>
+                  </div>
+                </a>
+              </div>
+            </li>
+            <li class="nav-item nav-profile dropdown">
+              <a
+                class="nav-link dropdown-toggle pl-0 pr-0"
+                href="#"
+                data-toggle="dropdown"
+                id="profileDropdown"
+              >
+                <i class="typcn typcn-user-outline mr-0"></i>
+                <span
+                  class="nav-profile-name"
+                  style="color: red; font-weight: 800"
+                  >Sooraj Hari</span
+                >
+              </a>
+              <div
+                class="dropdown-menu dropdown-menu-right navbar-dropdown"
+                aria-labelledby="profileDropdown"
+              >
+                <a class="dropdown-item">
+                  <i class="typcn typcn-cog text-primary"></i>
+                  Settings
+                </a>
+                <a class="dropdown-item">
+                  <i class="typcn typcn-power text-primary"></i>
+                  Logout
+                </a>
+              </div>
+            </li>
+          </ul>
+          <button
+            class="navbar-toggler navbar-toggler-right d-lg-none align-self-center"
+            type="button"
+            data-toggle="offcanvas"
+          >
+            <span class="typcn typcn-th-menu"></span>
+          </button>
+        </div>
+      </nav>
+      <!-- partial -->
+      <div class="container-fluid page-body-wrapper">
+        <!-- partial:../../partials/_settings-panel.html -->
+        <div class="theme-setting-wrapper">
+          <div id="settings-trigger">
+            <i class="typcn typcn-cog-outline"></i>
+          </div>
+          <div id="theme-settings" class="settings-panel">
+            <i class="settings-close typcn typcn-delete-outline"></i>
+            <p class="settings-heading">SIDEBAR SKINS</p>
+            <div class="sidebar-bg-options" id="sidebar-light-theme">
+              <div class="img-ss rounded-circle bg-light border mr-3"></div>
+              Light
+            </div>
+            <div class="sidebar-bg-options selected" id="sidebar-dark-theme">
+              <div class="img-ss rounded-circle bg-dark border mr-3"></div>
+              Dark
+            </div>
+            <p class="settings-heading mt-2">HEADER SKINS</p>
+            <div class="color-tiles mx-0 px-4">
+              <div class="tiles success"></div>
+              <div class="tiles warning"></div>
+              <div class="tiles danger"></div>
+              <div class="tiles primary"></div>
+              <div class="tiles info"></div>
+              <div class="tiles dark"></div>
+              <div class="tiles default border"></div>
+            </div>
+          </div>
+        </div>
+        <!-- partial -->
+        <!-- partial:../../partials/_sidebar.html -->
+        <nav class="sidebar sidebar-offcanvas" id="sidebar">
+          <ul class="nav">
+            <li class="nav-item">
+              <div class="d-flex sidebar-profile">
+                <!-- <div class="sidebar-profile-image">
+                  <img src="../../images/faces/face29.png" alt="image" />
+                  <span class="sidebar-status-indicator"></span>
+                </div> -->
+                <div class="sidebar-profile-name">
+                  <p class="sidebar-name">Sooraj Hari</p>
+                  <p class="sidebar-designation">Welcome</p>
+                </div>
+              </div>
+              <div class="nav-search">
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Type to search..."
+                    aria-label="search"
+                    aria-describedby="search"
+                  />
+                  <div class="input-group-append">
+                    <span class="input-group-text" id="search">
+                      <i class="typcn typcn-zoom"></i>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <p class="sidebar-menu-title">Dash menu</p>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/admin/admindashboard">
+                <i class="typcn typcn-device-desktop menu-icon"></i>
+                <span class="menu-title"
+                  >Dashboard
+                  <span class="badge badge-primary ml-3">New</span></span
+                >
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                data-toggle="collapse"
+                href="/admin/category"
+                aria-expanded="false"
+                aria-controls="ui-basic"
+              >
+                <i class="typcn typcn-briefcase menu-icon"></i>
+                <span class="menu-title">Category</span>
+                <!-- <i class="typcn typcn-chevron-right menu-arrow"></i> -->
+              </a>
+              <div class="collapse" id="ui-basic">
+                <!-- <ul class="nav flex-column sub-menu">
+                  <li class="nav-item">
+                    <a
+                      class="nav-link"
+                      href="../../pages/ui-features/buttons.html"
+                      >Buttons</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link"
+                      href="../../pages/ui-features/dropdowns.html"
+                      >Dropdowns</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link"
+                      href="../../pages/ui-features/typography.html"
+                      >Typography</a
+                    >
+                  </li>
+                </ul> -->
+              </div>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                data-toggle="collapse"
+                href=""
+                aria-expanded="false"
+                aria-controls="form-elements"
+              >
+                <i class="typcn typcn-film menu-icon"></i>
+              <span class="menu-title">Products</span>
+                <!-- <i class="menu-arrow"></i> -->
+              </a>
+              <!-- <div class="collapse" id="form-elements">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item">
+                    <a
+                      class="nav-link"
+                      href="../../pages/forms/basic_elements.html"
+                      >Basic Elements</a
+                    >
+                  </li>
+                </ul>
+              </div> -->
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                data-toggle="collapse"
+                href="/admin/user"
+                aria-expanded="false"
+                aria-controls="charts"
+              >
+                <i class="typcn typcn-chart-pie-outline menu-icon"></i>
+                <span class="menu-title">User</span>
+                <!-- <i class="menu-arrow"></i> -->
+              </a>
+              <!-- <div class="collapse" id="charts">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../../pages/charts/chartjs.html"
+                      >ChartJs</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li> -->
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                data-toggle="collapse"
+                href="/admin/orderadmin"
+                aria-expanded="false"
+                aria-controls="tables"
+              >
+                <i class="typcn typcn-th-small-outline menu-icon"></i>
+                <span class="menu-title">Orders</span>
+               
+              </a>
+             
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                data-toggle="collapse"
+                href="/admin/coupon"
+                aria-expanded="false"
+                aria-controls="icons"
+              >
+                <i class="typcn typcn-compass menu-icon"></i>
+                <span class="menu-title">Coupons</span>
+              
+              </a>
+            
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                data-toggle="collapse"
+                href="/admin/banner"
+                aria-expanded="false"
+                aria-controls="auth"
+              >
+                <i class="typcn typcn-user-add-outline menu-icon"></i>
+                <span class="menu-title">Banners</span>
+               
+              </a>
+              
+            </li>
+
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                data-toggle="collapse"
+                href="/admin/return"
+                aria-expanded="false"
+                aria-controls="auth"
+              >
+                <i class="typcn typcn-user-add-outline menu-icon"></i>
+                <span class="menu-title">Return</span>
+            
+              </a>
+            
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="/admin/offer"
+              >
+                <i class="typcn typcn-document-text menu-icon"></i>
+                <span class="menu-title">Offers</span>
+              </a>
+            </li>
+            
+          </ul>
+       
+        
+        </nav>
+        <!-- partial -->
+        <div class="main-panel">
+          <div class="content-wrapper">
+            <div class="row">
+              <div class="col-lg-12 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">Product</h4>
+                    <div class="table-responsive">
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <!-- <th>Description</th> -->
+                            <th>Price</th>
+                            <th>Category</th>
+                            <th>Color</th>
+                            <th>Size</th>
+                            <th>Stock</th>
+                            <th>Image</th>
+                            <th>Action</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <% product.forEach(function(item, index) { %>
+                            
+                              <tr data-product-id="<%= item._id %>">
+                                <td><%= index + 1 %></td>
+                                <td><%= item.name %></td>
+                                <!-- <td><%= item.description %></td> -->
+                                <td><%= item.price %></td>
+                                <td><%= item.categoryId?.name %></td>
+                                <td><%= item.Color %></td>
+                                <td><%= item.Size %></td>
+                                <td><%= item.Stock %></td>
+                               <td>
+                                <% if (item.image && Array.isArray(item.image)) { %>
+                                  <% item.image.forEach(function(image, imageIndex) { %>
+                                    <% const imagePath = image.replace('public', ''); %>
+                                    <img class="image" style="width: 80px;height: 20vh; border-radius: 0px;" src="<%= imagePath %>" alt="no">
+                                  <% }) %>
+                                <% } %>
+                                
+                              </td>
+                                <td>
+                                  <a href="product/editProduct/<%= item._id %>" class="btn btn-warning">Edit</a>
+                                  <button type="button" class="btn btn-danger delete-btn" id="hero"  data-product-id="<%= item._id %>" data-toggle="modal" data-target="#deleteModal">Delete</button>
+                                  <div id="confirm-dialog" style="display: none; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: #ffffff; width: 500px; height: 150px; border: none; text-align: center;" class="shadow">
+                                    <p   style="color: black; font-weight: bold" class="mt-4">Are you sure you want to remove this product?</p>
+                                    <button onclick="hideDialog()" data-product-id="<%= item._id %>" class="btn btn-primary w-25">Yes</button>
+                                    <button onclick="hideDialog()" class="btn btn-secondary w-25">No</button>
+                                  </div>
+                                </td>
+                              </tr>
+                           
+                          <% }) %>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+            <a href="product/addproduct" class="btn btn-success mb-4">Add Products</a>
+          </div>
+          
+          <div class="row mb-5">
+            <div class="col">
+              <div class="block-27">
+                <ul class="pagination justify-content-center m-4">
+                  <li class="page-item">
+                    <a class="page-link" href="/admin/product?page=1">&lt;</a>
+                  </li>
+                  <% for (let i = 1; i < totalPages; i++) { %>
+                  <% const isActive = i === currentPage; %>
+                  <li class="page-item <%= isActive ? 'active' : '' %>">
+                    <a class="page-link" href="/admin/product?page=<%= i %>">
+                      <span style="font-size: 18px;"><%= i %></span>
+                    </a>
+                  </li>
+                  <% } %>
+                  <li class="page-item">
+                    <a class="page-link" href="/admin/product?page=<%= totalPages %>">&gt;</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+
+          <footer class="footer">
+            <div class="d-sm-flex justify-content-center justify-content-sm-between">
+              <span class="text-center text-sm-left d-block d-sm-inline-block">Copyright © Sooraj Hari 2023 <a href="https://www.bootstrapdash.com/" target="_blank">Winkle.com</a> 2023</span>
+              <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Winkle World class of collection new trends  <a href="https://www.bootstrapdash.com/" target="_blank"> </a></span>
+            </div>
+          </footer>
+        </div>
+      </body>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      
+      <script src="/assets/js/off-canvas.js"></script>
+      <script src="/assets/js/hoverable-collapse.js"></script>
+      <script src="/assets/js/template.js"></script>
+      <script src="/assets/js/settings.js"></script>
+      <script src="/assets/js/todolist.js"></script>
+    
+      <script src="/assets/vendors/chart.js/Chart.min.js"></script>
+      
+      <script src="/assets/js/chart.js"></script>
+      <script>
+// $(document).ready(function() {
+
+//   $('.delete-btn').on('click', function(e) {
+//     e.preventDefault();
+//     var productId = $(this).data('product-id');
+//     var $row = $(this).closest('tr');
+
+//     if (confirm('Are you sure you want to delete this product?')) {
+     
+//       $.ajax({
+//         url: '/admin/product/deleteProduct/' + productId,
+//         method: 'PUT',
+//         success: function(response) {
+       
+//           console.log('Product removed from the list successfully');
+        
+//           $row.remove();
+//         },
+//         error: function(error) {
+       
+//           console.error('Failed to remove the product from the list');
+//         }
+//       });
+//     }
+//   });
+// });
+
+$(document).on("click", ".delete-btn", function() {
+  const productId = $(this).data("product-id");
+  console.log(productId);
+  showDialog(productId);
+});
+
+function showDialog(productId) {
+  $("#confirm-dialog").show();
+  $("#confirm-dialog button.btn-primary").data("product-id", productId);
+}
+
+$(document).on("click", "#confirm-dialog button.btn-primary", function() {
+  const productId = $(this).data("product-id");
+  console.log(productId);
+
+  $.ajax({
+    url: '/admin/product/deleteProduct/' + productId,
+    method: "PUT",
+    data: { id: productId},
+    success: function(response) {
+      console.log(response);
+
+      if (response === "Coupon deleted successfully") {
+        // Remove the corresponding table row from the DOM
+        $('tr[data-product-id="' + productId + '"]').remove();
+        $("#confirm-dialog").hide();
+      }
+    },
+    error: function(error) {
+      // Handle any errors that occurred during the request
+    }
+  });
+});
+
+function hideDialog() {
+  $("#confirm-dialog").hide();
+}
+
+
+      </script>
+    
+
+      <!-- <script src="/assets/vendors/js/vendor.bundle.base.js"></script> -->
+     
+    
+      </html>
