@@ -17,7 +17,7 @@ const Category = require("../models/categorySchema");
 const Offer = require("../models/offerSchema");
 const easyinvoice = require("easyinvoice");
 const fs = require("fs");
-const dotenv = require("dotenv").config();
+
 
 const crypto = require("crypto");
 const { rawListeners } = require("process");
@@ -103,8 +103,9 @@ const verifylogin = async (req, res) => {
   }
 };
 
-const accountSid = process.env.TWILIO_ACCOUNT_SID;
-const authToken = process.env.TWILIO_AUTH_TOKEN;
+
+const accountSid = "ACec49a27ee210e84a9c7808a645827073";
+const authToken = "e9c5767803332b10fd22cd3ef791320b";
 const client = require("twilio")(accountSid, authToken);
 
 function generateOTP() {
@@ -175,11 +176,11 @@ const insertUser = async (req, res) => {
 
       res.render("users/otp.ejs", { mobile: req.body.mobile });
     } else {
-      res.redirect("/signUp?message=registration-failed");
+      res.redirect("/signUp");
     }
   } catch (error) {
     console.log(error.message);
-    res.status(500).send("Internal Server Error");
+    res.redirect("/signUp");
   }
 };
 
@@ -1017,18 +1018,18 @@ const CreateOrder = async (req, res) => {
     });
 
 
-    let  subtotal = cart[0].items.reduce((total, item) => total + item.price, 0);
+    const  subtotal = cart[0].items.reduce((total, item) => total + item.price, 0);
     // const userAppliedCouponId = user.coupon[0].toString();
 
-    if (user.coupon.length > 0) {
-      const appliedCoupon = coupons.find(
-        (coupon) => coupon._id.toString() == user.coupon[0]
-      );
+    // if (user.coupon.length > 0) {
+    //   const appliedCoupon = coupons.find(
+    //     (coupon) => coupon._id.toString() == user.coupon[0]
+    //   );
 
-      if (appliedCoupon) {
-        subtotal -= appliedCoupon.discount;
-      }
-    }
+    //   if (appliedCoupon) {
+    //     subtotal -= appliedCoupon.discount;
+    //   }
+    // }
     
     const discount = subtotal * 0.1;
     // const shipping = 5;
@@ -1145,18 +1146,18 @@ const verifyPayment = async (req, res) => {
       };
     });
 
-    let  subtotal = cart[0].items.reduce((total, item) => total + item.price, 0);
+    const  subtotal = cart[0].items.reduce((total, item) => total + item.price, 0);
  
 
-    if (user.coupon.length > 0) {
-      const appliedCoupon = coupons.find(
-        (coupon) => coupon._id ==user.coupon[0]
-      );
+    // if (user.coupon.length > 0) {
+    //   const appliedCoupon = coupons.find(
+    //     (coupon) => coupon._id ==user.coupon[0]
+    //   );
 
-      if (appliedCoupon) {
-        subtotal -= appliedCoupon.discount;
-      }
-    }
+    //   if (appliedCoupon) {
+    //     subtotal -= appliedCoupon.discount;
+    //   }
+    // }
 
     const discount = subtotal * 0.1;
 
