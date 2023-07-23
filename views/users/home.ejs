@@ -182,7 +182,7 @@
           <% for (let i = 2; i < 3; i++) { %>
             <% const item = banner[i]; %>
             <% const firstImagePath = item.imagepath[0].replace('public', ''); %>
-            <div class="col-md-5 p-md-5 img img-2 d-flex justify-content-center align-items-center" style="background-image: url('<%= firstImagePath %>')">
+            <div class="col-md-5 p-md-5 img img-2 d-flex justify-content-center align-items-center">
               <img src="<%= firstImagePath %>" alt="banner">
               <a href="" class="d-flex justify-content-center align-items-center">
                 <!-- <span class="icon-play"></span> -->
@@ -324,7 +324,7 @@
             <div class="col-md-8 d-flex align-items-stretch">
             
                 <% const firstImagePath = item.imagepath[0].replace('public', ''); %>
-                <div class="img" style="background-image: url('<%= firstImagePath %>')">
+                <div class="img" >
                   <img src="<%= firstImagePath %>" alt="banner">
                 </div>
               
@@ -347,7 +347,7 @@
             <% const firstImagePath = item.imagepath[0].replace('public', ''); %>
             <div
               class="img img-2"
-              style="background-image: url(images/about-2.jpg)"
+              
             > <img src="<%= firstImagePath %>" alt="banner"></div>
           </div>
           <div class="col-md-7 py-3 py-md-5 ftco-animate">
