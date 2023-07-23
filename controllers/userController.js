@@ -17,6 +17,7 @@ const Category = require("../models/categorySchema");
 const Offer = require("../models/offerSchema");
 const easyinvoice = require("easyinvoice");
 const fs = require("fs");
+const dotenv = require("dotenv").config();
 
 const crypto = require("crypto");
 const { rawListeners } = require("process");
@@ -102,8 +103,8 @@ const verifylogin = async (req, res) => {
   }
 };
 
-const accountSid = "ACec49a27ee210e84a9c7808a645827073";
-const authToken = "e9c5767803332b10fd22cd3ef791320b";
+const accountSid = process.env.TWILIO_ACCOUNT_SID;
+const authToken = process.env.TWILIO_AUTH_TOKEN;
 const client = require("twilio")(accountSid, authToken);
 
 function generateOTP() {
